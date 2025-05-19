@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: self-hosted 
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -16,7 +15,7 @@ jobs:
       uses: hashicorp/setup-terraform@v3
       with:
         terraform_version: 1.6.0
-        
+
     - name: Terraform Format Verify
       id: fmt
       run: terraform fmt -check
